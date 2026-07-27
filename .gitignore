@@ -1,5 +1,35 @@
-.DS_Store
-*.mhtml
-.claude/
-*.local.md
-CLAUDE.md
+# Allowlist, not a blocklist.
+#
+# This repo is public (GitHub Pages needs it on the free plan), so nothing gets
+# committed unless it is explicitly permitted here. Ignore everything, then
+# re-admit the files that actually produce the website, one at a time.
+#
+# Consequence: CLAUDE.md, NOTES.local.md, screenshots, scratch PDFs, and
+# anything else dropped into this directory are untracked by default.
+#
+# To add a genuinely new site file, add a matching "!" line below. If a file
+# isn't listed, that is the intended behavior — don't work around it with
+# `git add -f`.
+
+# Ignore everything...
+*
+
+# ...but descend into directories, so the exceptions below can match.
+!*/
+
+# Pages
+!index.html
+!research.html
+!teaching.html
+!cv.html
+!ai-in-university-education-interview/index.html
+
+# Styles and hosting config
+!style.css
+!CNAME
+!README.md
+!.gitignore
+
+# Assets (named explicitly — a PDF dropped into assets/ should not auto-commit)
+!assets/ms_cv.pdf
+!assets/shaffer_fin_accounting_text.pdf
